@@ -54,7 +54,7 @@ public class StudentController {
 
     @PostMapping("/students/{id}")
     public String updateStudent(@PathVariable Long id,
-                                @ModelAttribute("student") Student student, Model model){
+                                @ModelAttribute("student") Student student){
 
         Student existingStudent = studentService.getById(id);
         existingStudent.setId(id);
